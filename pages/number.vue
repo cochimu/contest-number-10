@@ -47,6 +47,10 @@ export default defineComponent({
 
     // 4つの数字の順番を考慮(24通り)
     // 全て計算する(64通り)
+    const numbers = [first.value, second.value, third.value, fourth.value];
+    console.log(numbers);
+
+
     // 10になる数字だけ取り出す
 
     // ここでresultsに10になる答えを入れる
