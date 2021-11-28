@@ -39,16 +39,21 @@ export default defineComponent({
     const second = ref<number>(0)
     const third = ref<number>(0)
     const fourth = ref<number>(0)
+
     // 10になる答えを入れる配列
     const results = ref<Array<String>>([])
 
     // "計算実行"ボタン押下時に実行されるメソッド
+
+    // 4つの数字の順番を考慮(24通り)
+    // 全て計算する(64通り)
+    // 10になる数字だけ取り出す
+
     // ここでresultsに10になる答えを入れる
     // 小数点の計算などでバグる可能性あるので、big.jsをインストール済です
     // https://github.com/MikeMcl/big.js/
     const execute = () => {
       results.value = []
-      console.log('execute')
       const f: Big = Big(first.value)
       const s: Big = Big(second.value)
       const t: Big = Big(third.value)
